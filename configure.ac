@@ -100,8 +100,9 @@ AC_TYPE_UID_T
 AC_C_INLINE
 
 # Checks for library functions.
-AC_FUNC_MALLOC
-AC_FUNC_REALLOC
+# Malloc and Realloc checks fail for OpenPandora, disable them
+#AC_FUNC_MALLOC
+#AC_FUNC_REALLOC
 AC_CHECK_FUNCS([alarm endpwent memset memmove mkdir select socket strdup strndup uname])
 
 AC_SUBST(EXTRA_LIBS)

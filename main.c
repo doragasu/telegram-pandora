@@ -134,17 +134,7 @@ char *get_home_directory (void) {
   if (home_directory != NULL) {
     return home_directory;
   }
-  struct passwd *current_passwd;
-  uid_t user_id;
-  setpwent ();
-  user_id = getuid ();
-  while ((current_passwd = getpwent ())) {
-    if (current_passwd->pw_uid == user_id) {
-      home_directory = tstrdup (current_passwd->pw_dir);
-      break;
-    }
-  }
-  endpwent ();
+  home_directory = getenv("HOME");
   if (home_directory == NULL) {
     home_directory = tstrdup (".");
   }

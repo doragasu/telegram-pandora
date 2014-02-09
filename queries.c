@@ -274,7 +274,7 @@ void remove_event_timer (struct event_timer *ev) {
 }
 
 double next_timer_in (void) {
-  if (!timer_tree) { return 1e100; }
+  if (!timer_tree) { return 1e100L; }
   return tree_get_min_timer (timer_tree)->timeout;
 }
 

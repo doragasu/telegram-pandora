@@ -1,6 +1,6 @@
 ## Telegram messenger CLI [![Build Status](https://travis-ci.org/vysheng/tg.png)](https://travis-ci.org/vysheng/tg)
 
-Command-line interface for [Telegram](http://telegram.org). Uses readline interface.
+Command-line interface for [Telegram](http://telegram.org). Uses readline interface. OpenPandora fork by doragasu.
 
 ### API, Protocol documentation
 
@@ -10,67 +10,19 @@ Documentation for MTproto protocol is available here: http://core.telegram.org/m
 
 ### Installation
 
-Clone GitHub Repository
-
-    $ git clone https://github.com/vysheng/tg.git && cd tg
+You can dowload the latest build ready to use with your OpenPandora from the [official repo](http://repo.openpandora.org/?page=detail&app=telegram-cli).
     
-or download and extract zip
+### Build
 
-    $ wget https://github.com/vysheng/tg/archive/master.zip -O tg-master.zip
-    $ unzip tg-master.zip && cd tg-master
-    
-#### Linux
+Using [yactefeau](http://www.gp32x.com/board/index.php?/topic/58490-yactfeau/):
 
-Install libs: readline openssl and (if you want to use config) libconfig and liblua.
-If you do not want to use them pass options --disable-libconfig and --disable-liblua respectively
-On ubuntu use: 
-    
-    $ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev
-On gentoo:
-    
-    $ sudo emerge -av sys-libs/readline dev-libs/libconfig dev-libs/openssl dev-lang/lua
-    
-On Fedora:
-
-    $ sudo yum install lua-devel openssl-devel libconfig-devel readline-devel
-
-Default Makefile uses liblua5.2 from ubuntu. If you use different version of liblua or linux you have to run ./configure script or you will get some strange compilation error. 
-
-Then
-
-    $ ./configure
-    $ make
-
-
-#### Mac OS X
-
-The client depends on [readline library](http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html) and [libconfig](http://www.hyperrealm.com/libconfig/), which are not included in OS X by default. You have to install these libraries manually, e.g. using [Homebrew](http://brew.sh/).
-
-    $ brew install libconfig
-    $ brew install readline
-    $ brew install lua
-    $ export CFLAGS="-I/usr/local/include -I/usr/local/Cellar/readline/6.2.4/include"
-    $ export LDFLAGS="-L/usr/local/lib -L/usr/local/Cellar/readline/6.2.4/lib"
-    $ ./configure && make
-    
-Thanks to [@jfontan](https://github.com/vysheng/tg/issues/3#issuecomment-28293731) for this solution.
-
-#### FreeBSD
-
-Install these ports:
-
-* devel/libconfig
-* devel/libexecinfo
-
-Then build:
-
-    $ env CC=clang CFLAGS=-I/usr/local/include LDFLAGS=-L/usr/local/lib ./configure
-    $ make
-    
-#### Other UNIX
-
-If you manage to launch it on other UNIX, please let me know.
-
+		$ cd ~/Pandora
+		$ mkdir telegram
+		$ setprj telegram
+		$ git clone https://github.com/doragasu/telegram-pandora.git
+		$ cd telegram-pandora
+		$ pndconfigure --disable-liblua
+		$ make
 
 ### Usage
 

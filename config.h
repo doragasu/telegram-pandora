@@ -20,7 +20,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <lauxlib.h> header file. */
-#define HAVE_LAUXLIB_H 1
+/* #undef HAVE_LAUXLIB_H */
 
 /* Define to 1 if you have the `config' library (-lconfig). */
 #define HAVE_LIBCONFIG 1
@@ -38,20 +38,20 @@
 #define HAVE_LIBZ 1
 
 /* Define to 1 if you have the <luaconf.h> header file. */
-#define HAVE_LUACONF_H 1
+/* #undef HAVE_LUACONF_H */
 
 /* Define to 1 if you have the <lualib.h> header file. */
-#define HAVE_LUALIB_H 1
+/* #undef HAVE_LUALIB_H */
 
 /* Define to 1 if you have the <lua.h> header file. */
-#define HAVE_LUA_H 1
+/* #undef HAVE_LUA_H */
 
 /* Define to 1 if you have the <mach/mach.h> header file. */
 /* #undef HAVE_MACH_MACH_H */
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */
-#define HAVE_MALLOC 1
+/* #undef HAVE_MALLOC */
 
 /* Define to 1 if you have the <malloc.h> header file. */
 #define HAVE_MALLOC_H 1
@@ -76,7 +76,7 @@
 
 /* Define to 1 if your system has a GNU libc compatible `realloc' function,
    and to 0 otherwise. */
-#define HAVE_REALLOC 1
+/* #undef HAVE_REALLOC */
 
 /* Define to 1 if you have the `select' function. */
 #define HAVE_SELECT 1
@@ -154,7 +154,7 @@
 #define STDC_HEADERS 1
 
 /* use lua */
-#define USE_LUA 1
+/* #undef USE_LUA */
 
 /* Define to `int' if <sys/types.h> doesn't define. */
 /* #undef gid_t */
